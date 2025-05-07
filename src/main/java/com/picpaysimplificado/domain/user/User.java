@@ -33,6 +33,17 @@ public class User {
 	
 	private BigDecimal balance;
 	
+	public BigDecimal getBalance() {// por algum motivo o Get do lombok nao funfa
+		return balance;
+	}
+
 	@Enumerated(EnumType.STRING) // Para representar algum dos valores do enum
 	private UserType userType;
+
+	public UserType getUserType() { // por algum motivo o Get do lombok nao funfa
+		return userType;
+	}
+	
+	
+
 }
