@@ -31,6 +31,7 @@ public class Transaction {
 	@JoinColumn(name = "sender_id")
 	@ManyToOne
 	private User sender;
+	
 	@JoinColumn(name = "receiver_id")
 	@ManyToOne
 	private User receiver;
