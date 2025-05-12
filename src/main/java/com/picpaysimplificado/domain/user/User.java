@@ -44,6 +44,6 @@ public class User {
 		return userType;
 	}
 	
-	
+	1
 
 }
