@@ -43,7 +43,4 @@ public class User {
 	public UserType getUserType() { // por algum motivo o Get do lombok nao funfa
 		return userType;
 	}
-	
-	1
-
 }
