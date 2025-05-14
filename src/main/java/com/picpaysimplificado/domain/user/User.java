@@ -33,14 +33,72 @@ public class User {
 	
 	private BigDecimal balance;
 	
-	public BigDecimal getBalance() {// por algum motivo o Get do lombok nao funfa
-		return balance;
-	}
-
 	@Enumerated(EnumType.STRING) // Para representar algum dos valores do enum
 	private UserType userType;
 
 	public UserType getUserType() { // por algum motivo o Get do lombok nao funfa
 		return userType;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getDocument() {
+		return document;
+	}
+
+	public void setDocument(String document) {
+		this.document = document;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassWord() {
+		return passWord;
+	}
+
+	public void setPassWord(String passWord) {
+		this.passWord = passWord;
+	}
+
+	public BigDecimal getBalance() {
+		return balance;
+	}
+
+	public void setBalance(BigDecimal balance) {
+		this.balance = balance;
+	}
+
+	public void setUserType(UserType userType) {
+		this.userType = userType;
+	}
+	
+	
 }
