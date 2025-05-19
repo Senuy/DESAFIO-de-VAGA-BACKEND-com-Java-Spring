@@ -2,6 +2,8 @@ package com.picpaysimplificado.domain.user;
 
 import java.math.BigDecimal;
 
+import com.picpaysimplificado.dtos.UserDTO;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -19,7 +21,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // Geracao do ID incremental
 	private Long id;
 	
-	private String name;
+	private String firstName;
 	
 	private String lastName;
 	
@@ -35,6 +37,17 @@ public class User {
 	
 	@Enumerated(EnumType.STRING) // Para representar algum dos valores do enum
 	private UserType userType;
+	
+
+	public  User(UserDTO data) {
+		this.firstName = data.firstName();
+		this.lastName = data.lastName();
+		this.balance = data.balance();
+		this.userType = data.usertype();
+		this.passWord = data.password();
+		this.email = data.password();
+	}
+
 
 	public UserType getUserType() { // por algum motivo o Get do lombok nao funfa
 		return userType;
@@ -48,12 +61,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getFistName() {
+		return firstName ;
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.firstName = name;
 	}
 
 	public String getLastName() {
@@ -99,6 +112,17 @@ public class User {
 	public void setUserType(UserType userType) {
 		this.userType = userType;
 	}
-	
+
+	public  void  User(UserDTO data) {
+		this.firstName = data.firstName();
+		this.lastName = data.lastName();
+		this.balance = data.balance();
+		this.userType = data.usertype();
+		/*
+		 * this.document = data.document();
+		 * this.email = data.email();
+		 * this.passWord = data.password();
+		 */
+	}
 	
 }
